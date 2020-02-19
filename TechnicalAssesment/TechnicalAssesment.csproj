@@ -17,15 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Database\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Database\localDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Update="localDb.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Database\localDb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Update="localDb_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
