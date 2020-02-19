@@ -12,7 +12,6 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using TechnicalAssesment.Model;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace TechnicalAssesment
 {
@@ -25,7 +24,8 @@ namespace TechnicalAssesment
         private static SqlConnection conn; 
         public static async Task Main(string[] args)
         {
-            string path = System.AppDomain.CurrentDomain.BaseDirectory + "localDb.mdf";
+            string path =  ".\\Database\\localDb.mdf";
+            var directory = System.IO.Directory.GetCurrentDirectory();
             //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Atila\source\repos\TechnicalAssesment\TechnicalAssesment\localDb.mdf; Integrated Security = True
 
             conn = new SqlConnection($"Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = {path}; Integrated Security = True");
