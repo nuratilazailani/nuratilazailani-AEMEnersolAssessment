@@ -24,8 +24,7 @@ namespace TechnicalAssesment
         private static SqlConnection conn; 
         public static async Task Main(string[] args)
         {
-            string path =  ".\\Database\\localDb.mdf";
-            var directory = System.IO.Directory.GetCurrentDirectory();
+            string path = System.IO.Directory.GetCurrentDirectory() + "\\Database\\localDb.mdf";
             //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Atila\source\repos\TechnicalAssesment\TechnicalAssesment\localDb.mdf; Integrated Security = True
 
             conn = new SqlConnection($"Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = {path}; Integrated Security = True");
